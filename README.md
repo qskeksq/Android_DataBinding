@@ -436,7 +436,9 @@ public class Item extends BaseObservable{
 
 
 참고
+- http://heepie.tistory.com/220?category=730950
 - http://gun0912.tistory.com/71
 - https://brunch.co.kr/@oemilk/107
 - https://medium.com/@futureofdev/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-what-is-databinding-recyclerview-e67abb855788
 - https://developer.android.com/topic/libraries/data-binding/index.html#build_environment
+- https://medium.com/@devyunsy/data-binding-guide-3-263ec47dbc8
