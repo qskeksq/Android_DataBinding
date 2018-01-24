@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="content"
+            type="com.example.mac.mvvm.MainActivity" />
+        <variable
+            name="item"
+            type="com.example.mac.mvvm.model.Item" />
+
+        <import type="android.databinding.ObservableArrayList" />
+        <import type="android.databinding.ObservableArrayMap" />
+        <import type="com.example.mac.mvvm.model.Item" />
+        <variable
+            name="itemList"
+            type="ObservableArrayList&lt;Item&gt;" />
+        <variable
+            name="itmMap"
+            type="ObservableArrayMap&lt;String, String&gt;" />
+        
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="@{(v)->content.onButtonClick(v)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="368dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            bind:item="@{itemList}" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
