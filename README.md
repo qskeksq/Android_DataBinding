@@ -111,7 +111,7 @@ public class Item extends BaseObservable{
 #### B. ObservableField<>
     ```java
     public class Item2{
-        public ObservableField<String> name = new ObservableField<>();
+        public final ObservableField<String> name = new ObservableField<>();
     }
     ```
 
