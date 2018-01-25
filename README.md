@@ -235,28 +235,28 @@ public class Item extends BaseObservable{
 
     xml 상에서 set*** 할 수 있으나 코드 상에서 없는 경우는 BindingAdapter 속성을 지정하고 xml 상에서 사용할 수 있다
 
-    ```java
-    @BindingAdapter({"bind:font"})
-    public static void setFont(TextView textView, String fontName) {
-        textView.setTypeface(Typeface.createFromAsset(textView.getContext().getAssets(), "fonts/" + fontName));
-    }
-    ```
+```java
+@BindingAdapter({"bind:font"})
+public static void setFont(TextView textView, String fontName) {
+    textView.setTypeface(Typeface.createFromAsset(textView.getContext().getAssets(), "fonts/" + fontName));
+}
+```
 
-    ```java
-    @BindingAdapter({"bind:imageUrl", "bind:error"})
-    public static void loadImage(ImageView imageView, String url, Drawable errorDrawable) {
-        // ImageUtil.loadImage(imageView, url, errorDrawable);
-    }
-    ```
+```java
+@BindingAdapter({"bind:imageUrl", "bind:error"})
+public static void loadImage(ImageView imageView, String url, Drawable errorDrawable) {
+    // ImageUtil.loadImage(imageView, url, errorDrawable);
+}
+```
 
-    ```html
-    <TextView
-        android:id="@+id/tvUserTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@{user.timeDate}"
-        />
-    ```
+```html
+<TextView
+    android:id="@+id/tvUserTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@{user.timeDate}"
+    />
+```
 
 ### (5) @BindingConversion
 
